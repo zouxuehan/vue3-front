@@ -12,4 +12,11 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    proxy: {
+      '/fn': {
+        target: 'http://192.168.1.53:9022/DreamWeb/'
+      }
+    }
+  }
 })

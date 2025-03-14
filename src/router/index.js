@@ -4,8 +4,8 @@ const publicRoutes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import('@/views/Login.vue'),
-  }
+    component: () => import('@/views/Login/index.vue'),
+  },
 ]
 
 const router = createRouter({
