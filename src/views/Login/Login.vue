@@ -23,6 +23,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useUserStore } from '@/stores/user'
+import { useRouter } from 'vue-router'
 const loginForm = ref({
   logname: '',
   password: '',
@@ -31,8 +32,10 @@ const loginForm = ref({
 const passwordValidator = []
 
 const userStore = useUserStore()
+const router = useRouter()
 const onLogin = () => {
   userStore.login(loginForm.value)
+  router.replace('/home')
 }
 </script>
 <style lang='scss' scoped>

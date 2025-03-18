@@ -1,6 +1,5 @@
 import axios from 'axios'
-import { useUserStore } from '@/stores/user'
-const userStore = useUserStore()
+// import { useUserStore } from '@/stores/user'
 
 const http = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_API,
@@ -12,6 +11,8 @@ const http = axios.create({
 
 http.interceptors.request.use(
   async (config) => {
+    const { useUserStore } = await import('@/stores/user')
+    const userStore = useUserStore()
     if (userStore.getToken) {
       config.headers.Authorization = `Bearer ${userStore.getToken}`
     }
@@ -20,7 +21,7 @@ http.interceptors.request.use(
   (error) => {
     const { response } = error
     if (response.status == 401) {
-      // return refreshToken(response.config)
+      return refreshToken(response.config)
     }
     return Promise.reject(error)
   },

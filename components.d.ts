@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     CommonForm: typeof import('./src/components/business/CommonForm/index.vue')['default']
     Icon: typeof import('./src/components/common/Icon/index.vue')['default']
+    InfiniteList: typeof import('./src/components/common/InfiniteList/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     VanButton: typeof import('vant/es')['Button']
@@ -17,5 +18,6 @@ declare module 'vue' {
     VanCellGroup: typeof import('vant/es')['CellGroup']
     VanField: typeof import('vant/es')['Field']
     VanForm: typeof import('vant/es')['Form']
+    VirtualList: typeof import('./src/components/common/virtualList/index.vue')['default']
   }
 }
