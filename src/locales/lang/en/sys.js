@@ -1,7 +1,17 @@
 export default {
-  usernamePlaceholder: "请输入用户名",
-  passwordPlaceholder: "请输入密码",
-  login: "login",
-  loginSuccess: "登录成功",
-  loginFailure: "登录失败",
+  usernamePlaceholder: 'please input userName',
+  passwordPlaceholder: 'please input password',
+  login: 'login',
+  loginSuccess: 'success to login',
+  loginFailure: 'fail to login',
+
+  weekDays: [
+    { text: 'Sun', value: 0 },
+    { text: 'Mon', value: 1 },
+    { text: 'Tue', value: 2 },
+    { text: 'Wed', value: 3 },
+    { text: 'Thu', value: 4 },
+    { text: 'Fri', value: 5 },
+    { text: 'Sat', value: 6 },
+  ],
 }

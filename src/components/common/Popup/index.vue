@@ -11,6 +11,7 @@
 export const POPUP_CLOSE_TYPE_BACK = 'back'
 export const POPUP_CLOSE_TYPE_CLICK = 'close'
 </script>
+
 <script setup>
 import { watch, ref } from 'vue'
 import { usePopupStore } from '@/stores/popup'
